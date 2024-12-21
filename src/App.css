@@ -84,6 +84,13 @@
   background-color: white;
   width: 70px;
 }
+.tooltip {
+  position: absolute;
+  width: 300px;
+  height: 60px;
+  border: 1px solid black;
+  top:
+}
 
 @keyframes spin {
   from {rotate: 0deg;}

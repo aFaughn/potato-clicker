@@ -6,6 +6,7 @@ import './App.css'
 function App() {
   const [count, setCount] = useState(0)
   const [cursors, setCursors] = useState(0)
+  const [clock, setClock] = useState(111)
 
   const handleSpudClick = () => {
     setCount(count + 1)
@@ -17,16 +18,20 @@ function App() {
     }
   }
 
+
   useEffect(() => {
     const timeout = setTimeout(() => {
-      setCount(count + 1)
-    },333)
-    return clearInterval(timeout)
-  },[count])
+      setCount(count + cursors * 0.3)
+    },clock)
+    return () => clearTimeout(timeout)
+  },[count,cursors])
 
   return (
     <>
-      <div id='currentBank'>Potatoes: {count}</div>
+    <div className='tooltip'>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci deserunt quae eos magni eveniet, temporibus similique delectus. Magni illum dignissimos fuga sunt sequi. Id quaerat sint ut deleniti veniam modi.</p>
+    </div>
+      <div id='currentBank'>Potatoes: {Math.round(count)}</div>
       <div id='store-container'>
         <div id='buy-cursors' onClick={() => buy('cursor')}>
           <img id='cursor-img' src={cursor}></img><p>Cursors: {cursors}</p>
