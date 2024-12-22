@@ -17,6 +17,8 @@
   background-color: #555;
 
   padding: 10px;
+
+  user-select: none;
 }
 
 #store-container {
