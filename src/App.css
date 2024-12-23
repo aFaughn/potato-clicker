@@ -105,6 +105,12 @@
   width: 50px;
   height: 50px;
   background-color: white;
+  background-size: contain;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+.upgrade:hover {
+  filter: drop-shadow(0px 0px 10px white);
 }
 .upgradeIcon {
   width: 48px;
