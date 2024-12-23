@@ -17,7 +17,7 @@ function App() {
   const [farmerCost, setFarmerCost] = useState(100)
 
   const [factories, setFactories] = useState(0)
-  const [factoryMult, setFactoryMult] = useState(0.25)
+  const [factoryMult, setFactoryMult] = useState(2.5)
   const [factoryCost, setFactoryCost] = useState(700)
 
   const [clock, setClock] = useState(100)
